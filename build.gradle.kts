@@ -3,8 +3,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 buildscript {
 	repositories {
 		maven {
-			name = "Sonatype Snapshots"
-			url = uri("https://oss.sonatype.org/content/repositories/snapshots")
+			name = "Kord Snapshots"
+			url = uri("https://repo.kord.dev/snapshots")
 		}
 	}
 }
@@ -14,7 +14,6 @@ plugins {
 
 	kotlin("jvm")
 
-	id("com.github.jakemarsden.git-hooks")
 	id("org.jetbrains.dokka")
 }
 
@@ -36,13 +35,9 @@ repositories {
 	mavenCentral()
 
 	maven {
-		name = "Sonatype Snapshots"
-		url = uri("https://oss.sonatype.org/content/repositories/snapshots")
+		name = "Kord Snapshots"
+		url = uri("https://repo.kord.dev/snapshots")
 	}
-}
-
-gitHooks {
-	setHooks(mapOf("pre-commit" to "applyLicenses detekt"))
 }
 
 subprojects {

@@ -5,6 +5,7 @@ on:
     branches-ignore:
       - "gh-pages"
       - "root"
+      - "v2.2.1"
 
   pull_request:
   merge_group:

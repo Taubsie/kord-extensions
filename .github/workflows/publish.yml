@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - "root"
+      - "v2.2.1"
 
 permissions:
   contents: write
