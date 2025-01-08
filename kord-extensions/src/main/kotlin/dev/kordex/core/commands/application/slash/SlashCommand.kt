@@ -49,6 +49,9 @@ public abstract class SlashCommand<C : SlashCommandContext<*, A, M>, A : Argumen
 	public open val parentCommand: SlashCommand<*, *, *>? = null,
 	public open val parentGroup: SlashGroup? = null,
 ) : ApplicationCommand<ChatInputCommandInteractionCreateEvent>(extension) {
+	/** @suppress Cached arguments object only used by the autocomplete event handler. **/
+	public var cachedArguments: A? = null
+
 	/** @suppress This is only meant for use by code that extends the command system. **/
 	public val kxLogger: KLogger = KotlinLogging.logger {}
 
@@ -171,6 +174,8 @@ public abstract class SlashCommand<C : SlashCommandContext<*, A, M>, A : Argumen
 					"instead."
 			)
 		}
+
+		cachedArguments = arguments?.invoke()
 	}
 
 	/** Call this to supply a command [body], to be called when the command is executed. **/
