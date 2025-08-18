@@ -30,7 +30,7 @@ sentry = "8.13.0"
 slf4j = "2.0.17"
 time4j-base = "5.9.4"
 time4j-tzdata = "5.0-2024a"
-toml = "0.4.0"
+toml = "0.5.0"
 
 [libraries]
 commons-validator = { module = "commons-validator:commons-validator", version.ref = "commons-validator" }
