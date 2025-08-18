@@ -29,7 +29,7 @@ pf4j = "3.13.0"
 sentry = "8.13.0"
 slf4j = "2.0.17"
 time4j-base = "5.9.4"
-time4j-tzdata = "5.0-2024a"
+time4j-tzdata = "5.0-2025a"
 toml = "0.4.0"
 
 [libraries]
