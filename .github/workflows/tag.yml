@@ -18,7 +18,7 @@ jobs:
       GPG_KEY_NAME: BFAAD5D6093EF5E62BC9A16A10DB8C6B4AE61C2F
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
